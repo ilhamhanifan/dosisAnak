@@ -32,9 +32,9 @@
 
 
 <div class="main center">
-	<input type="button" value="Rumus 1" onClick="document.getElementById('rumus1').scrollIntoView();" />
-	<input type="button" value="Rumus 2" onClick="document.getElementById('rumus2').scrollIntoView();" />
-	<input type="button" value="Rumus 3" onClick="document.getElementById('rumus3').scrollIntoView();" />
+	<input type="button" value="Rumus tablet dan kapsul" onClick="document.getElementById('rumus1').scrollIntoView();" />
+	<input type="button" value="Rumus obat cair - volume" onClick="document.getElementById('rumus2').scrollIntoView();" />
+	<input type="button" value="Rumus obat cair - konsentrasi" onClick="document.getElementById('rumus3').scrollIntoView();" />
 
 
 	<h1>Perhitungan Dosis Tablet/Kapsul dan Obat Cair/Injeksi</h1>
@@ -42,7 +42,8 @@
 	
 
 	<h2><u>1. Tablet/Kapsul</u> </h1>
-	<h2 id="rumus1">Rumus 1</h2>
+	<p>Rumus perhitungan untuk tablet dan kapsul</p>
+	<h2 id="rumus1">Rumus tablet dan kapsul</h2>
 	<p>\[Jumlah Yang diminta = { dosis yang diminta \over dosis yang tersedia}. 1  tablet \] <br></p>
 
 	<form class=""><br>
@@ -51,11 +52,12 @@
 
 		<p id="hasil1">Hasil : 0 satuan</p>
 	
-	<input type="button" value="submit" onclick="getrumus1()"/><br>
+	<input type="button" value="submit" onclick="getrumus1()"/><br><br>
 
 
 	<h2><u>2. Obat Cair/Injeksi</u> </h1>
-	<h2 id="rumus1">Rumus 2</h2>
+	<p>Rumus perhitungan untuk obat cair/injeksi berdasarkan volumenya.</p>
+	<h2 id="rumus2">Rumus obat cair - volume</h2>
 	<p>\[X = { dosis yang diminta \over dosis yang tersedia}. Volume yang tersedia \] <br></p>
 
 	<form class=""><br>
@@ -65,11 +67,12 @@
 
 		<p id="hasil2">Hasil : 0 satuan</p>
 	
-	<input type="button" value="submit" onclick="getrumus2()"/><br>
+	<input type="button" value="submit" onclick="getrumus2()"/><br><br>
 
 
 
-	<h2 id="rumus3">Rumus 3</h2>
+	<h2 id="rumus3">Rumus obat cair - konsentrasi</h2>
+	<p>Rumus perhitungan untuk obat cair/injeksi berdasarkan konsentrasinya.</p>
 	<p>\[X = { konsentrasi yang diminta \over konsentrasi yang tersedia}. jumlah yang diminta \] <br></p>
 
 	<form class=""><br>
@@ -79,7 +82,7 @@
 
 		<p id="hasil3">Hasil : 0 satuan</p>
 	
-	<input type="button" value="submit" onclick="getrumus2()"/><br>
+	<input type="button" value="submit" onclick="getrumus2()"/><br><br>
 
 
 
