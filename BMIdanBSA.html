@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<style>
+</style>
+<script src="script.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+<body>
+
+
+<!-- Side navigation -->
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="pediatri.html">Dosis Pediatri</a>
+  <a href="BMIdanBSA.html">BMI dan BSA</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; TemanSuster &#9764;<i class="fas fa-camera"></i></span>
+
+
+<!-- Side navigation-->
+
+<div class="main center">
+	<h2>Kalkulasi Body Mass Index(BMI) dan Body Surface Area(BSA)</h2>
+	<p>BMI = <sup>Berat Badan(kg)</sup>&frasl;<sub>(Tinggi badan(cm))<sup>2</sup></sub></p>
+	<p>BSA = &#8730;<sup>Tinggi Badan(cm) x Berat Badan(kg)</sup>&frasl;<sub>3600</sub> </p>
+
+	<form class=""><br>
+		<label> Berat Badan(kg): </label> <br> <input type="text" id="beratBadan"/><br><br> </label>
+		<label> Tinggi Badan(cm): </label> <br> <input type="text" id="tinggiBadan"/><br><br>	
+		<p id="bmi">Hasil BMI : 0 </p>
+		<p id="bsa">Hasil BSA : 0 (Rumus Mosteller)</p>
+
+		<input type="button" value="submit" onclick="kalkulasiBMIdanBSA()"/><br>
+		
+	</form>
+
+</div>
+
+
+
+</body>
+</html> 

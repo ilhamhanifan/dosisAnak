@@ -1,0 +1,139 @@
+ <!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<style>
+</style>
+<script src="script.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<body>
+
+
+<!-- Side navigation -->
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="pediatri.html">Dosis Pediatri</a>
+  <a href="BMIdanBSA.html">BMI dan BSA</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; TemanSuster &#9764;<i class="fas fa-camera"></i></span>
+
+
+<!-- Side navigation-->
+
+
+
+<div class="main center">
+	<input type="button" value="Rumus Young" onClick="document.getElementById('tYoung').scrollIntoView();" />
+	<input type="button" value="Rumus Ausberger" onClick="document.getElementById('tAusberger').scrollIntoView();" />
+	<input type="button" value="Rumus Clark" onClick="document.getElementById('tClark').scrollIntoView();" />
+	<input type="button" value="Rumus BSA" onClick="document.getElementById('tBSA').scrollIntoView();" />
+
+	<h1>Rumus Pediatri</h1>
+	<p>Berikut adalah beberapa rumus yang digunakan untuk mengukur dosis obat untuk anak</p>
+	
+
+	<h2><u>1. Berdasarkan Usia</u> </h1>
+	<h2 id="tYoung">Rumus Young</h2>
+	<p>Digunakan untuk menghitung dosis obat anak diatas umur 12 tahun</p>
+	<p>\[Dy = { n \over n+12}.D \]
+		Dy = Dosis anak (mg)<br>
+		n  = Umur Anak <br>
+		D  = Dosis untuk Dewasa (mg)<br>
+	</p>
+
+
+	<form class=""><br>
+		<label>Umur Anak: </label> <br> <input type="text" id="umurAnak"/><br><br> 
+		<label>Dosis Dewasa:  </label> <br> <input type="text" id="dosisDewasaY"/><br><br> 
+		<p id="young">Hasil : 0 mg</p>
+	
+	<input type="button" value="submit" onclick="getYoung()"/><br>
+
+
+
+	<h2 id="tAusberger">Rumus AusBerger</h2>
+	<p>Lebih akurat dari Rumus Young, tetapi lebih sulit dipraktekan</p>
+	<p> Untuk 2-12 Bulan : (m+13)% x D <br> 
+		Untuk 1-11 Tahun : (4n+20)% x D<br>
+		Untuk 12-16 Tahun: (5n+10)% x D <br><br>
+		m = usia dalam Bulan <br>
+		n = usia dalam Tahun <br>
+		D = Dosis untuk Dewasa (mg)
+	</p>
+
+
+	<form class=""><br>
+		<p>Pilih Rumus</p> 
+	    <input type="radio" id="r1" name="rb" value="13"/>2-12 Bulan<br> 
+	    <input type="radio" id="r2" name="rb" value="20"/>1-11 Tahun<br> 
+	    <input type="radio" id="r3" name="rb" value="10"/>12-16 Tahun   
+
+		<br> <br> 
+		<label>Umur Anak Bulan: </label> <br> <input type="text" id="umurBulan"/><br><br> 
+		<label>Umur Anak Tahun:  </label> <br> <input type="text" id="umurTahun"/><br><br> 
+		<label>Dosis Dewasa:  </label> <br> <input type="text" id="dosisDewasaA"/><br><br> 
+
+		<p id="ausberger">Hasil : 0 mg</p>
+	
+	<input type="button" value="submit" onclick="getAusberger()"/><br>
+
+
+	<h2><u>2. Berdasarkan Berat Badan</u> </h1>
+	<h2 id="tClark">Rumus Clark</h2>
+	<p>Ditujukan untuk perhitungan obat anak umur 2-17 tahun, berdasarkan berat badan</p>
+	<p> \[Dy = { W \over 68}.D \]<br><br>
+		Dy = Dosis anak (mg)<br>	
+		W = berat badan (kg) <br>
+		D = Dosis untuk Dewasa (mg)
+	</p>
+
+
+	<form class=""><br>
+		<label>Berat Badan: </label> <br> <input type="text" id="beratBadanC"/><br><br> 
+		<label>Dosis Dewasa:  </label> <br> <input type="text" id="dosisDewasaC"/><br><br> 
+		<p id="clark">Hasil : 0 mg</p>
+	
+	<input type="button" value="submit" onclick="getClark()"/><br>
+
+
+
+
+	<h2><u>3. Berdasarkan Luas Permukaan Tubuh</u> </h1>
+	<h2 id="tBSA">Rumus Body Surface Area(BSA) - Mosteller</h2>
+	<p>Metode ini adalah yang paling tepat karena menunjukkan korelasi langsung antara luas permukaan tubuh dan kecepatan metabolisme obat</p>
+	<p> \[BSA = \sqrt{ tinggiBadan.BeratBadan \over 3600 }\]<br><br>
+		\[Dy =  {BSAm^2 \over 1,73kg }.D\]<br><br>
+		Dy = Dosis anak (mg)<br>
+		W = berat badan (kg) <br>
+		D = Dosis untuk Dewasa (mg)
+	</p>
+
+
+	<form class=""><br>
+		<label>Tinggi Badan: </label> <br> <input type="text" id="tinggiBadan"/><br><br> 
+		<label>Berat Badan: </label> <br> <input type="text" id="beratBadanB"/><br><br> 
+		<label>Dosis Dewasa:  </label> <br> <input type="text" id="dosisDewasaB"/><br><br> 
+		<p id="bsa">BSA : 0 mg</p>
+		<p id="dosisbsa">Hasil : 0 mg</p>
+	
+	<input type="button" value="submit" onclick="getBSA()"/><br>
+
+
+</form>
+
+</div>
+
+
+
+</body>
+</html> 

@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<style>
+</style>
+<script src="script.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+<body>
+
+
+<!-- Side navigation -->
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="kalkulasiDosis.html">Kalkulasi Dosis</a>
+  <a href="BMIdanBSA.html">BMI dan BSA</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; TemanSuster &#9764;<i class="fas fa-camera"></i></span>
+
+
+<!-- Side navigation-->
+
+<div class="main center">
+	<h2>Perhitungan dosis tablet/kapsul/obat cair/suntikan</h2>
+	<p>Dosis = ( Dosis yang diminta (mg/ml/..) : Dosis yang tersedia(mg/ml/..) ) x Satuan yang ada(mg/ml/..)</p>
+	<form class=""><br>
+		<label>Dosis yang diminta (mg/ml/..): </label> <br> <input type="text" id="dyd"/><br><br> </label>
+		<label>Dosis yang tersedia (mg/ml/..):  </label> <br> <input type="text" id="dyt"/><br><br>	
+		<label>Satuan yang ada (mg/ml/..): </label> <br> <input type="text" id="sya"/><br><br>	
+		<p id="dosis">Hasil : 0 mg</p>
+	
+	<input type="button" value="submit" onclick="kalkulasiDosis()"/><br>
+
+
+</form>
+
+</div>
+
+
+
+</body>
+</html> 
