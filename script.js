@@ -60,6 +60,41 @@ function getBSA(){
 
 
 
+function getrumus1(){
+	var dosisYangDiminta  = parseFloat(document.getElementById("dosisyd").value);
+	var dosisYangTersedia = parseFloat(document.getElementById("dosisyt").value);
+	document.getElementById("hasil1").innerHTML ="Hasil : " + ( (dosisYangDiminta/dosisYangTersedia)*1 ).toFixed(2) + " satuan";
+	console.log(dosisYangDiminta);
+	console.log(dosisYangTersedia);
+	console.log(((dosisYangDiminta/dosisYangTersedia) ).toFixed(2)) ;
+
+}
+
+
+function getrumus1(){
+	var dosisYangDiminta  = parseFloat(document.getElementById("dosisyd").value);
+	var dosisYangTersedia = parseFloat(document.getElementById("dosisyt").value);
+	document.getElementById("hasil1").innerHTML ="Hasil : " + ( (dosisYangDiminta/dosisYangTersedia)*1 ).toFixed(2) + " satuan";
+
+}
+
+function getrumus2(){
+	var dosisYangDiminta  = parseFloat(document.getElementById("dosisyd2").value);
+	var dosisYangTersedia = parseFloat(document.getElementById("dosisyt2").value);
+	var VolumeYangTersedia  = parseFloat(document.getElementById("volumeyt").value);
+	
+	document.getElementById("hasil2").innerHTML ="Hasil : " + ( (dosisYangDiminta/dosisYangTersedia)*VolumeYangTersedia ).toFixed(2) + " satuan";
+
+}3
+function getrumus2(){
+	var konsentrasiYangDiminta  = parseFloat(document.getElementById("kondim").value);
+	var konsentrasiYangTersedia = parseFloat(document.getElementById("konters").value);
+	var jumlahYangTersedia  = parseFloat(document.getElementById("jumdim").value);
+	
+	document.getElementById("hasil3").innerHTML ="Hasil : " + ( (konsentrasiYangDiminta/konsentrasiYangTersedia)*jumlahYangTersedia ).toFixed(2) + " satuan";
+
+}
+
 
 
 
